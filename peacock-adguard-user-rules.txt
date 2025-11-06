@@ -1,0 +1,23 @@
+! PEACOCK — Network blocking (regex + host rules)
+
+! Primary Peacock CDN shards (regex)
+/^g\d{1,4}-(vod|sf|sle)-us-cmaf-prd-(cf|cc|sf|ph|dc|at|ak|fy)(-[a-z0-9-]+)?\.cdn\.peacocktv\.com$/
+
+! Secondary NETSKRT ad-segment CDN
+/^g\d{1,4}-[a-z0-9]+-us-cmaf-prd-[a-z0-9-]+\.prd\.pck\.netskrt\.net$/
+
+! Tertiary / ad-tech / time sync (priority)
+||time.akamai.com^$important
+||video-ads-module.ad-tech.nbcuni.com^$important
+
+! Additional ad/analytics hosts observed
+||s.adex2.fwmrm.net^
+||adex2.fwmrm.net^
+||*.v.fwmrm.net^
+||29773.v.fwmrm.net^
+||s.fwmrm.net^
+||nbcstreaming.hb-api.omtrdc.net^
+||ingest.webcol.sdp.peacocktv.com^
+
+! Minimal allowlist so player core keeps working
+@@||play.ovp.peacocktv.com^
