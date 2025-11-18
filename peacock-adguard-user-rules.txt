@@ -18,7 +18,6 @@
 ! === TERTIARY BLOCK / AD-TECH / TELEMETRY (high priority) ===
 ||time.akamai.com^$important
 ||video-ads-module.ad-tech.nbcuni.com^$important
-||cybertron.id.peacocktv.com^$important
 ||identity.mparticle.com^$important
 ||config.clients.peacocktv.com^$important
 ||nbcstreaming.hb-api.omtrdc.net^$important
